@@ -1,7 +1,11 @@
 expron: extract pronunciation
 =============================
-a_word -> url -> page source -> pronunciation_url -> download -> play
+word -> url -> page source -> pronunciation_url -> download -> play
 
 Dependency
 ----------
-PycURL
+- Python 2.7
+- PycURL
+- Mac OS X(Yosemite)
+- afplay(play audio file in prompt)
+- Naver EnDic(endic.naver.com)
