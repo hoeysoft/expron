@@ -9,3 +9,8 @@ Dependency
 - Mac OS X(Yosemite)
 - afplay(play audio file in prompt)
 - Naver EnDic(endic.naver.com)
+
+To Do
+-----
+- Target Path
+- Verify: sound-word
