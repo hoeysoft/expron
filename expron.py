@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-# hoeysoft
-
 import sys
 import os
 import re
@@ -17,7 +15,7 @@ def main(word):
     if pron_url:
         filename = word+'.mp3'
         download_pronfile(filename, pron_url)
-        os.system('afplay '+filename)
+        play_downloaded(filename)
 
 def fetch_page_source(word):
     url = QUERY_URL.format(word)
@@ -41,6 +39,11 @@ def download_pronfile(filename, url):
         c.setopt(c.WRITEDATA, f)
         c.perform()
         c.close()
+
+def play_downloaded(filename):
+    cmd = '( afplay {} & )'.format(filename)
+    os.system(cmd)
+
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
